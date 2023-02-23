@@ -21,7 +21,9 @@ router=APIRouter(
     tags=["posts"]   #----> this is for the swagger ui docs grouping 
 )
 
-
+@router.get("/")
+def hello_message():
+    return "hello world !!!"
 
 ## using ORM sqlalchemy
 #on postman we defined an enviroment called dev in with  a URL :http://127.0.0.1:8000/ 
